@@ -1,3 +1,7 @@
+package Encapsulamento;
+
+import javax.swing.JOptionPane;
+
 /**
  * Classe para demonstrar o princípio do Encapsulamento
  * @author Erick Gomes Barbosa
@@ -7,11 +11,12 @@
 public class Conta{
     private String cliente;
     private Float saldo;
-    private Integer senha;
+    private int senha;
     private Boolean bloqueado;
+    private int tentativas = 0;
 
     //Construtor da Classe
-    public Conta(String cliente, Float saldo, Integer senha){
+    public Conta(String cliente, Float saldo, int senha){
         this.cliente = cliente;
         this.saldo = saldo;
         this.senha = senha;
@@ -22,6 +27,39 @@ public class Conta{
         System.out.println("Nome do Cliente: " + cliente);
         System.out.println("Saldo: " + saldo);
         System.out.println("Está Bloqueada:" + (isBloqueado()?"Sim":"Não"));
+    }
+
+    //Método para realizar um saque na conta do cliente
+    public void realizarSaque(){
+        int pwd = 0;
+        pwd = Integer.parseInt(JOptionPane.showInputDialog("Digite sua senha"));
+        
+        if(!verificarSenha(pwd)){
+            JOptionPane.showMessageDialog(null, "Senha inválida");
+            if(!isBloqueado())
+                realizarSaque();
+        }
+        else{
+            float valor = 0;
+            valor = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor a sacar"));
+            setSaldo(getSaldo()-valor);
+        }
+    }
+
+    //Método para verificar a senha
+    private Boolean verificarSenha(int pwd){
+        if(pwd == getSenha())
+            return true;
+        else{
+            if(tentativas>=2){
+                JOptionPane.showMessageDialog(null, "Conta bloqueada");
+                setBloqueado(true);
+            }
+            else
+                tentativas++;
+            
+            return false;
+        }
     }
 
 
@@ -35,24 +73,24 @@ public class Conta{
         return this.cliente;
     }
 
-    public void setSaldo(Float saldo){
+    private void setSaldo(Float saldo){
         this.saldo = saldo;
     }
-    public Float getSaldo(){
+    private Float getSaldo(){
         return this.saldo;
     }
 
-    public void setSenha(Integer senha){
+    private void setSenha(Integer senha){
         this.senha = senha;
     }
-    public Integer getSenha(){
+    private Integer getSenha(){
         return this.senha;
     }
 
-    public void setBloqueado(Boolean bloqueado){
+    private void setBloqueado(Boolean bloqueado){
         this.bloqueado = bloqueado;
     }
-    public Boolean isBloqueado(){
+    private Boolean isBloqueado(){
         return this.bloqueado;
     }
 
