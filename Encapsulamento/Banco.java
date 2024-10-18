@@ -10,8 +10,7 @@ public class Banco {
     public static void main(String[] args) {
         Conta cc = new Conta("Gervásio", 1000.0f, 1234);
         cc.exibirDadosConta();
-
-        cc.realizarSaque();
+        cc.trocarSenha();
         cc.exibirDadosConta();
     }
 }

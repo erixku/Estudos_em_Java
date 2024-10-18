@@ -1,2 +1,2 @@
-##Encapsulamento
+## Encapsulamento
 Projeto para simular uma conta corrente de um banco. O projeto foi escrito na linguagem java utilizando o VSCode como IDE. Esse projeto demonstra o princípio de Encapsulamento na Orientação a Objetos

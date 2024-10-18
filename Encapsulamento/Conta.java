@@ -25,7 +25,7 @@ public class Conta{
 
     public void exibirDadosConta(){
         System.out.println("Nome do Cliente: " + cliente);
-        System.out.println("Saldo: " + saldo);
+        verificarSaldo();
         System.out.println("Está Bloqueada:" + (isBloqueado()?"Sim":"Não"));
     }
 
@@ -35,7 +35,7 @@ public class Conta{
         pwd = Integer.parseInt(JOptionPane.showInputDialog("Digite sua senha"));
         
         if(!verificarSenha(pwd)){
-            JOptionPane.showMessageDialog(null, "Senha inválida");
+            JOptionPane.showMessageDialog(null, "Senha inválida!\nTentativas restantes: " + (2-tentativas));
             if(!isBloqueado())
                 realizarSaque();
         }
@@ -62,6 +62,50 @@ public class Conta{
         }
     }
 
+    //Método para depositar um valor ao saldo da conta
+    public void depositar(){
+        float valor = 0;
+        valor = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor a depositar"));
+        setSaldo(getSaldo()+valor);
+        JOptionPane.showMessageDialog(null, "Valor depositado com sucesso");
+        exibirDadosConta();
+    }
+
+    //Método para verificar o saldo da conta com autenticação por senha
+    public void verificarSaldo(){
+        int pwd = 0;
+        pwd = Integer.parseInt(JOptionPane.showInputDialog("Digite a senha"));
+
+        if(!verificarSenha(pwd)){
+            JOptionPane.showMessageDialog(null, "Senha incorreta! \ntentativas restantes: "+ (2-tentativas));
+            if(!isBloqueado())
+                verificarSaldo();
+        }
+        else
+            System.out.println("Seu saldo é de: " + getSaldo());
+    }
+
+    //Método para trocar a senha do cliente
+    public void trocarSenha(){
+        int pwd = Integer.parseInt(JOptionPane.showInputDialog("Digite a senha atual"));
+        int novaSenha = Integer.parseInt(JOptionPane.showInputDialog("Digite a nova senha"));
+        int confirmarSenha = Integer.parseInt(JOptionPane.showInputDialog("Confirme a nova senha"));
+        
+        if(!verificarSenha(pwd)){
+            JOptionPane.showMessageDialog(null, "Senha incorreta!\nTentativas restantes: " + (2-tentativas));              
+        }
+        else{
+            if(novaSenha!=confirmarSenha){
+                JOptionPane.showMessageDialog(null, "As senhas não são iguais");
+            }
+            else{
+                setSenha(novaSenha);
+            }
+        }
+    }
+
+
+
 
 
 
@@ -80,10 +124,10 @@ public class Conta{
         return this.saldo;
     }
 
-    private void setSenha(Integer senha){
+    private void setSenha(int senha){
         this.senha = senha;
     }
-    private Integer getSenha(){
+    private int getSenha(){
         return this.senha;
     }
 
