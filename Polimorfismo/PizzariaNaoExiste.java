@@ -8,17 +8,6 @@ package Polimorfismo;
 
 public class PizzariaNaoExiste {
     public static void main(String[] args) {
-        Forno forno = new Forno();
-        Pizza portuguesa = new Portuguesa();
-        Pizza frangoCatupiry = new FrangoCatupiry();
-        Pizza margherita = new Margherita();
-        Pizza boloLaranja = new BoloLaranja();
-        Pizza california = new California();
-        Pizza baiana = new Baiana();
-        Pizza mm = new MeM();
-        Pizza torta = new TortaNozes();
-        Pizza pao = new PaoCalabresa();
-
-        forno.preparar(boloLaranja);
+        Menu menu = new Menu();
     }
 }
