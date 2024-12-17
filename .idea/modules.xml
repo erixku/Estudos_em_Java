@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Estudos_em_Java.iml" filepath="$PROJECT_DIR$/Estudos_em_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicio-Negativos/Exercicio-Negativos.iml" filepath="$PROJECT_DIR$/Exercicio-Negativos/Exercicio-Negativos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Membros_Estaticos/Membros_Estaticos.iml" filepath="$PROJECT_DIR$/Membros_Estaticos/Membros_Estaticos.iml" />
+    </modules>
+  </component>
+</project>
