@@ -1,4 +1,4 @@
-package Encapsulamento;
+package Aulas_Fatec.Encapsulamento;
 
 /**
  * Classe para instanciar objetos da classe Conta

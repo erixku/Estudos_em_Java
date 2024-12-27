@@ -1,4 +1,4 @@
-package Excecao;
+package Aulas_Fatec.Excecao;
 
 /**
  * Classe para tratar as especificidades da classe Divisão

@@ -1,4 +1,4 @@
-package Concorrencia;
+package Aulas_Fatec.Concorrencia;
 
 /**
  * Classe para implementar a execução de threads promovendo o paralelismo e concorrência entre elas

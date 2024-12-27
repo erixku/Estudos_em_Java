@@ -1,4 +1,4 @@
-package Polimorfismo;
+package Aulas_Fatec.Polimorfismo;
 
 /**
  * Classe para criar o objeto de comportamento POLIMÓRFICO Forno

@@ -1,4 +1,4 @@
-package Interfaces;
+package Aulas_Fatec.Interfaces;
 
 /**
  * Classe para instanciar objetos do tipo Eletrodoméstico

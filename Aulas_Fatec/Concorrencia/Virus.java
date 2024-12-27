@@ -1,4 +1,4 @@
-package Concorrencia;
+package Aulas_Fatec.Concorrencia;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;

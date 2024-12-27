@@ -1,4 +1,4 @@
-package Interfaces;
+package Aulas_Fatec.Interfaces;
 
 /**
  * Classe para implementar TODOS os métodos da interface Eletrodomésticos

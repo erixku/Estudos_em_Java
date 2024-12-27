@@ -1,4 +1,4 @@
-package Encapsulamento;
+package Aulas_Fatec.Encapsulamento;
 
 import javax.swing.JOptionPane;
 

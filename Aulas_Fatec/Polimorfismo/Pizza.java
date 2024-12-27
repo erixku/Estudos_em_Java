@@ -1,4 +1,4 @@
-package Polimorfismo;
+package Aulas_Fatec.Polimorfismo;
 
 /**
  * Interface criada para determinar quais funcionalidades terão os objetos concretos a partir dela

@@ -1,4 +1,4 @@
-package Concorrencia;
+package Aulas_Fatec.Concorrencia;
 
 /**
  * Classe para demonstrar a execução de várias Threads em paralelo

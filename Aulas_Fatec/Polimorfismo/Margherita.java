@@ -1,4 +1,4 @@
-package Polimorfismo;
+package Aulas_Fatec.Polimorfismo;
 
 /**
  * Classe para implementar TODOS os métodos abstratos da interface Pizza

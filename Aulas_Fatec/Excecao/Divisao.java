@@ -1,4 +1,4 @@
-package Excecao;
+package Aulas_Fatec.Excecao;
 
 //Sessão de importação
 import javax.swing.JOptionPane;

@@ -4,7 +4,7 @@
  * @since Interface criada em 24 de outubro de 2024
  */
 
- package Interfaces;
+ package Aulas_Fatec.Interfaces;
  
  public interface Eletrodoméstico {
     public void ligar();
